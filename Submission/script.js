@@ -5,7 +5,7 @@
  */
 
 const getReply = (userInput) => {
-  return "";
+  return "Are the battery terminals corroded?";
 };
 
 export { getReply };

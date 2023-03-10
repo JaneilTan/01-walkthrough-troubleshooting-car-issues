@@ -3,9 +3,17 @@
  * @param {string} userInput A string of the value that is typed into the web form. Example: "yes"
  * @returns {string} The reply which is either the next question or answer. Example "Are the battery terminals corroded?"
  */
+let level = 1;
 
 const getReply = (userInput) => {
-  return "Are the battery terminals corroded?";
+  if (level === 1) {
+    level = 2;
+    return "Are the battery terminals corroded?";
+  }
+  
+  if (level === 2) {
+    return "Clean terminals and try starting again";
+  }
 };
 
 export { getReply };

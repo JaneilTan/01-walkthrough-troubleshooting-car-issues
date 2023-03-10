@@ -11,11 +11,19 @@ beforeEach(() => {
 });
 
 describe("getReply", () => {
-  it("should reply with [PUT YOUR DESCRIPTION HERE]", () => {
+  it("should reply with the correct response for: yes, yes", () => {
+    // Input: "yes"
     const reply1 = getReply("yes");
-    const expectedReply1 = "";
+    // Output: "Are the battery terminals corroded?"
+    const expectedReply1 = "Are the battery terminals corroded?";
+    // Input: "yes"
+    const reply2 = getReply("yes");
+    // Output: "Clean terminals and try starting again"
+    const expectedReply2 = "Clean terminals and try starting again";
+
+    
 
     // Uncomment the following line and update your actual reply with your expected reply
-    // expect(reply1).toEqual(expectedReply1);
+    expect(reply1).toEqual(expectedReply1);
   });
 });

@@ -9,7 +9,7 @@ let path;
 const getReply = (userInput) => {
   let isAffirmative;
 
-  if (userInput === "yes" || userInput === "YES") {
+  if (userInput === "yes" || userInput === "YES" || userInput === "yeah") {
      isAffirmative = true;
   } else {
     isAffirmative = false;

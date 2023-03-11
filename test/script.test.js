@@ -96,4 +96,16 @@ describe("getReply", () => {
     const expectedReply2 = "Clean terminals and try starting again";
     expect(reply2).toEqual(expectedReply2);
   });
+  it("should support 'yeah' for an affirmative answer", () => { 
+    // Input: "yeah"
+    const reply1 = getReply("yeah");
+    // Output: "Are the battery terminals corroded?"
+    const expectedReply1 = "Are the battery terminals corroded?";
+    expect(reply1).toEqual(expectedReply1);
+    // Input: "YES"
+    const reply2 = getReply("YES");
+    // Output: "Clean terminals and try starting again"
+    const expectedReply2 = "Clean terminals and try starting again";
+    expect(reply2).toEqual(expectedReply2);
+  });
   

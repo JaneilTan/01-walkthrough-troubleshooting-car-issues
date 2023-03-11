@@ -7,9 +7,17 @@ let level = 1;
 let path;
 
 const getReply = (userInput) => {
+  let isAffirmative;
+
+  if (userInput === "yes" || userInput === "YES") {
+     isAffirmative = true;
+  } else {
+    isAffirmative = false;
+  }
+
   if (level === 1) {
     level = 2;
-    if (userInput === "yes") {
+    if (isAffirmative) {
       path = "yes";
     return "Are the battery terminals corroded?";
     }
@@ -22,7 +30,7 @@ const getReply = (userInput) => {
   if (level === 2) {
     level = 3;
     if (path === "yes") {
-      if (userInput === "yes") {
+      if (isAffirmative) {
       return "Clean terminals and try starting again";
     }
 
@@ -31,7 +39,7 @@ const getReply = (userInput) => {
       }
     }
     if (path === "no") {
-      if (userInput === "yes") {
+      if (isAffirmative) {
       return "Replace the battery";
     }
       if (userInput === "no") {

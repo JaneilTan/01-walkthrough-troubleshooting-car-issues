@@ -12,7 +12,13 @@ const getReply = (userInput) => {
   }
   
   if (level === 2) {
+    if (userInput === "yes") {
     return "Clean terminals and try starting again";
+  }
+
+    if (userInput === "no") {
+      return "Replace cables and try again";
+    }
   }
 };
 
